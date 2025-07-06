@@ -1,0 +1,287 @@
+{
+    "Kelvin Bender": {
+        "class": 11,
+        "email": "kelvinenergie1@web.de",
+        "timetable": {
+            "Montag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Wds",
+                "[5, 6]": "Har"
+            },
+            "Dienstag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Fip",
+                "[5, 6]": "Wds"
+            },
+            "Mittwoch": {
+                "[1]": "Bro",
+                "[2]": "Har",
+                "[5, 6]": "Hei",
+                "[8]": "Hi",
+                "[9, 10]": "Kü"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Sl",
+                "[3]": "Fip",
+                "[4]": "Hei",
+                "[5, 6]": "Bro",
+                "[10]": "Wds"
+            },
+            "Freitag": {
+                "[1, 2]": "Ad",
+                "[3, 4]": "Fip",
+                "[5, 6]": "Smo"
+            }
+        }
+    },
+    "Yannick Stiel": {
+        "class": 11,
+        "email": "yfsti@t-online.de",
+        "timetable": {
+            "Montag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Fei",
+                "[5, 6]": "Spi"
+            },
+            "Dienstag": {
+                "[1, 2]": "Hi",
+                "[5, 6]": "Sg"
+            },
+            "Mittwoch": {
+                "[1]": "Sg",
+                "[2]": "Spi",
+                "[5, 6]": "Fa",
+                "[7]": "Fei",
+                "[8]": "Hi",
+                "[9, 10]": "Fa"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Dar",
+                "[3]": "La",
+                "[4]": "Fa",
+                "[5, 6]": "Sg",
+                "[8, 9]": "Gä"
+            },
+            "Freitag": {
+                "[1, 2]": "Fa",
+                "[3, 4]": "La",
+                "[5, 6]": "Smo"
+            }
+        }
+    },
+    "Dominik Müller": {
+        "class": 11,
+        "email": "dominik300379@gmail.com",
+        "timetable": {
+            "Montag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Wds",
+                "[5, 6]": "Har"
+            },
+            "Dienstag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Fip",
+                "[5, 6]": "Wds"
+            },
+            "Mittwoch": {
+                "[1]": "Krp",
+                "[2]": "Har",
+                "[5, 6]": "Hei",
+                "[8]": "Hi",
+                "[9, 10]": "Fa"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Sl",
+                "[3]": "Fip",
+                "[4]": "Hei",
+                "[5, 6]": "Krp",
+                "[8, 9]": "Poe",
+                "[10]": "Wds"
+            },
+            "Freitag": {
+                "[1, 2]": "Ad",
+                "[3, 4]": "Fip",
+                "[5, 6]": "Smo"
+            }
+        }
+    },
+    "Leevi Schmidt": {
+        "class": 11,
+        "email": "Leevischmidt14@gmail.com",
+        "timetable": {
+            "Montag": {
+                "[3, 4]": "Kü",
+                "[5, 6]": "Kle",
+                "[7, 8, 9]": "Hom"
+            },
+            "Dienstag": {
+                "[3, 4]": "Kü",
+                "[5, 6]": "Sg"
+            },
+            "Mittwoch": {
+                "[1]": "Sg",
+                "[2]": "Kle",
+                "[3, 4]": "Sg",
+                "[5, 6]": "Hel",
+                "[7]": "Kü",
+                "[9, 10]": "Kü"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Dar",
+                "[3]": "Han",
+                "[4]": "Hel",
+                "[5, 6]": "Sg",
+                "[8, 9]": "Kle"
+            },
+            "Freitag": {
+                "[1, 2]": "Ad",
+                "[3, 4]": "Han",
+                "[5, 6]": "Smo"
+            }
+        }
+    },
+    "Julia Bender": {
+        "email": "juliamalia.bender@gmail.com",
+        "class": 11,
+        "timetable": {
+            "Montag": {
+                "[1, 2]": "Brs",
+                "[3, 4]": "Har"
+            },
+            "Dienstag": {
+                "[1, 2]": "Brs",
+                "[3, 4]": "Schö",
+                "[5, 6]": "Rü"
+            },
+            "Mittwoch": {
+                "[1]": "Bro",
+                "[3, 4]": "Hdt",
+                "[5, 6]": "Brüm",
+                "[7]": "Har",
+                "[8]": "Brs",
+                "[9, 10]": "Kü"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Ha",
+                "[3]": "Schö",
+                "[4]": "Brüm",
+                "[5, 6]": "Bro",
+                "[7]": "Hdt",
+                "[8, 9]": "Mog"
+            },
+            "Freitag": {
+                "[1, 2]": "Brüm",
+                "[3, 4]": "Schö",
+                "[5, 6]": "Gau"
+            }
+        }
+    },
+    "Furat Joqi": {
+        "email": "jogifurat@gmail.com",
+        "class": 11,
+        "timetable": {
+            "Montag": {
+                "[1, 2]": "Hi",
+                "[3, 4]": "Har",
+                "[5, 6]": "Har",
+                "[7, 8, 9]": "Hom"
+            },
+            "Dienstag": {
+                "[1, 2]": "Hi",
+                "[5, 6]": "Sg",
+                "[9, 10]": "Za"
+            },
+            "Mittwoch": {
+                "[1]": "Sg",
+                "[2]": "Har",
+                "[5, 6]": "Zhl",
+                "[7]": "Har",
+                "[8]": "Hi",
+                "[9, 10]": "Kü"
+            },
+            "Donnerstag": {
+                "[1, 2]": "Sie",
+                "[3]": "Han",
+                "[4]": "Zhl",
+                "[5, 6]": "Bro"
+            },
+            "Freitag": {
+                "[1, 2]": "Zhl",
+                "[3, 4]": "Han",
+                "[5, 6]": "Smo"
+            }
+        }
+    },
+    "Darius Poth": {
+        "email": "darius.poth@gmail.com",
+        "class": 11,
+        "timetable": {
+            "Montag": {
+                "1, 2": "Hi",
+                "3, 4": "Wds",
+                "7, 8": "Hdt"
+            },
+            "Dienstag": {
+                "1, 2": "Hi",
+                "3, 4": "Fip",
+                "5, 6": "Wds"
+            },
+            "Mittwoch": {
+                "1": "Krp",
+                "3, 4": "Bar",
+                "5, 6": "Hel",
+                "8": "Hi"
+            },
+            "Donnerstag": {
+                "1, 2": "Sl",
+                "3": "Fip",
+                "4": "Hel",
+                "5, 6": "Krp",
+                "7": "Bar",
+                "8, 9": "Poe",
+                "10": "Wds"
+            },
+            "Freitag": {
+                "1, 2": "Ad",
+                "3, 4": "Fip",
+                "5, 6": "Gau"
+            }
+        }
+    },
+    "Risandu": {
+        "email": "risandubometh@gmail.com",
+        "class": 11,
+        "timetable": {
+            "Montag": {
+                "1, 2": "Hi",
+                "3, 4": "Wds",
+                "7, 8": "Hdt"
+            },
+            "Dienstag": {
+                "1, 2": "Hi",
+                "3, 4": "Kro",
+                "5, 6": "Wds"
+            },
+            "Mittwoch": {
+                "1": "Bro",
+                "3, 4": "Hdt",
+                "5, 6": "Hei",
+                "8": "Hi"
+            },
+            "Donnerstag": {
+                "1, 2": "Sie",
+                "3": "Kro",
+                "4": "Hei",
+                "5, 6": "Bro",
+                "7": "Hdt",
+                "8, 9": "Mog",
+                "10": "Wds"
+            },
+            "Freitag": {
+                "1, 2": "Ad",
+                "3, 4": "Kro",
+                "5, 6": "Kö"
+            }
+        }
+    }
+}

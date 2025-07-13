@@ -1,5 +1,4 @@
 import requests
-from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -13,7 +12,6 @@ import json
 import smtplib
 import ssl
 from email.message import EmailMessage
-import os
 
 
 def get_html_dsb(requests_url=''):
@@ -97,24 +95,24 @@ def dsb(timetable, response, school_class, tomorrow_boolean):
         elif "6-12" in dsb_hours:
             print('RANGE 6-12')
             for hour in teacher_hours_list:
-                #print(f"hours : {hour}")
+                # print(f"hours : {hour}")
                 if int(hour) >= 6:
                     affected_hours.append(hour)
         else:
-            #print("teacher_hours_list", teacher_hours_list, "\ndsb_hours", dsb_hours)
+            # print("teacher_hours_list", teacher_hours_list, "\ndsb_hours", dsb_hours)
             for hour in teacher_hours_list:
                 pos = dsb_hours.find(hour)
-                #print(pos, dsb_hours == -1, dsb_hours)
+                # print(pos, dsb_hours == -1, dsb_hours)
                 try:
                     if dsb_hours[pos + 1] in range(3):
                         print("         SPECIAL EVENT LINE 104", dsb_hours[pos], dsb_hours[pos + 1])
                     if not pos == -1 and not dsb_hours[pos - 1] == 1 and not dsb_hours[pos + 1] in range(3):
                         affected_hours.append(hour)
                 except IndexError as err:
-                    #print("     error line 108", pos, dsb_hours[pos - 1], err)
+                    # print("     error line 108", pos, dsb_hours[pos - 1], err)
                     affected_hours.append(hour)
             # print(f'affected hours = {affected_hours}')
-            #print(f"affected_hours = {affected_hours}")
+            # print(f"affected_hours = {affected_hours}")
         return True if not affected_hours == [] else False
 
     def handle_event():
@@ -149,8 +147,8 @@ def dsb(timetable, response, school_class, tomorrow_boolean):
                 # print(teacher, event, affected_hours)
                 if tomorrow_boolean:
                     if not previos_day_printed == current_day:
-                        #print(f"prev: '{previos_day_printed}', curr: '{current_day}'")
-                        #print(not previos_day_printed == current_day)
+                        # print(f"prev: '{previos_day_printed}', curr: '{current_day}'")
+                        # print(not previos_day_printed == current_day)
                         previos_day_printed = current_day
                         if tomorrow:
                             print(f'\n\n    {current_day} ({current_day_idx})')
@@ -166,7 +164,8 @@ def dsb(timetable, response, school_class, tomorrow_boolean):
             else:
                 event = ''
         if not event_boolean:
-            print(f'\n       NOT EVENT FOUND! MORE INFOS: {teacher}: {teacher_hours}\n       Possibilties:',  splitted_line[5].split('<')[0])
+            print(f'\n       NOT EVENT FOUND! MORE INFOS: {teacher}: {teacher_hours}\n       Possibilties:',
+                  splitted_line[5].split('<')[0])
         hours_string = ''
         affected_hours_len = len(affected_hours)
         for idx, hour in enumerate(affected_hours):
@@ -235,32 +234,8 @@ def dsb(timetable, response, school_class, tomorrow_boolean):
         else:
             print('  -', email_content.split('|')[-1][1:])
 
-
     for line in response.splitlines():
         splitted_line = line.split('#010101">')
-        #if len(splitted_line) > 0 and 'Betreuung' in line:
-        #    room = splitted_line[5].split('<')[0]
-        #    instead_of_room = splitted_line[8].split('<')[0]
-        #    current_teacher = splitted_line[3].split('<')[0]
-        #    instead_of_teacher = splitted_line[7].split('<')[0]
-        #    #print(splitted_line[7])
-        #    #print(f'room: {room}, instead_of_room: {instead_of_room}, teacher: {current_teacher}, instead_of_teacher: {instead_of_teacher}')
-#
-        #if len(splitted_line) > 0 and 'Veranst.' in line:
-        #    print('\n')
-        #    for idx, phrase in enumerate(splitted_line):
-        #        if not idx > -1:
-        #            continue
-        #        print(phrase, '.' * (120 - len(phrase)), idx)
-        #    email_content = ''
-        #    teacher = 'Hr/Fr Gaube'
-        #    hours_string = '5. Stunde'
-#
-        #    print('\n')
-        #    #print(f'room: {room}, instead_of_room: {instead_of_room}, teacher: {current_teacher}, instead_of_teacher: {instead_of_teacher}')
-#
-        #    print(email_content)
-        #    print('\n')
 
         for idx, day in enumerate(timetable):
             if day + '</div>' in line:
@@ -287,17 +262,6 @@ def dsb(timetable, response, school_class, tomorrow_boolean):
                     teacher = timetable[current_day][teacher_hours]
                     teacher = teacher[0].upper() + teacher[1:].lower()
                     if teacher + "<" in line or teacher + "," in line or ", " + teacher in line:
-                        #current_teacher = splitted_line[3].split('<')[0]
-                        #print(current_teacher)
-                        # print(teacher)
-                        # room = splitted_line[5].split('<')[0]
-                        # instead_of_room = splitted_line[8].split('<')[0]
-                        #current_teacher = splitted_line[3].split('<')[0]
-                        #print(current_teacher)
-                        # instead_of_teacher = splitted_line[7].split('<')[0]
-                        # print(f'room: {room}, instead_of_room: {instead_of_room}, teacher: {current_teacher}, instead_of_teacher: {instead_of_teacher}')
-                        # for i, o in enumerate(splitted_line):
-                        #    print(i, o)
                         if is_hour_in_teacher_hours():
                             handle_event()
 
@@ -370,7 +334,8 @@ def send_email_and_update_history(email_content, email_receiver, name,
         with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
             smtp.login(email_sender, email_password)
             smtp.sendmail(email_sender, email_receiver, em.as_string())
-        print(f'    ---> Email was sent to {name} ({email_receiver}) with Email_Title: \n         "{subject}"\n         Description: "{body}"')
+        print(
+            f'    ---> Email was sent to {name} ({email_receiver}) with Email_Title: \n         "{subject}"\n         Description: "{body}"')
 
     with open(r'C:\Users\Kelbig\PycharmProjects\HILDA_DSB\event_history.json', 'r', encoding='UTF-8') as json_file:
         event_history = json.load(json_file)
@@ -413,12 +378,9 @@ def main():
 
     response = get_html_dsb(requests_url="")
 
-    # with open('html_code.json', encoding='UTF-8') as json_file:
-    #    response = json.load('2023-01-31 | Tuesday')
-
     for name in data_of_students:
         print(f'{f"{name}":-^90}')
-        # print(data_of_students[name], '\n', data_of_students[name]["timetable"])
+
         timetable = data_of_students[name]["timetable"]
         school_class = data_of_students[name]["class"]
         email = data_of_students[name]["email"]
@@ -431,13 +393,7 @@ def main():
                                           automation=False)
 
     print(datetime.datetime.now().strftime('%H:%M:%S'))
-    #os.system(r"C:\Users\Kelbig\PycharmProjects\Test\Sleep_Mode.lnk")
 
 
 if __name__ == '__main__':
-    #try:
-        main()
-    #    #sleep(50)
-    #except Exception as err:
-    #    print(err)
-    #    sleep(100)
+    main()

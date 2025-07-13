@@ -1,10 +1,10 @@
 user = '157721'
-password = 'hildaistsuper'
-email_password = 'hrizwcjwgtcbvgmy'
+password = 'censored for github upload'
+email_password = 'censored for github upload'
 email_sender = 'hildadsb@gmail.com'
 url = 'https://dsbmobile.de/Login.aspx#menu=0&item=0'
 notes = '''
-    Julia Email:    juliamalia.bender@gmail.com 
+    Julia Email:    
     Dome Email:
     Leevi Email:
     Yan Email: 
